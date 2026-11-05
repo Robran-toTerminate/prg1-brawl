@@ -12,6 +12,10 @@ kan spelaren välja mellan varje tur? Finns det en regel som bara ditt spel har?
 
 Skriv några meningar. Idén får ändras längs vägen, och då skriver du vad du ändrade i faser.md.
 
+
+Ideen är att två länder ska strida mot varandra. Man väljer en stad på sin tur och gör en tillhörande action. T.ex att bygga en fabrik eller attackera en fiende. Den som först förlorar alla sina städer förlorar.
+
+
 ## Fyra frågor planen ska svara på
 
 Tänk igenom dessa steg på samma sätt som vi har gjort spårningen tillsammans på tavlan. Vilka variabler behöver du? Vilka villkor? Vad ska de göra? Vad sker i nästa steg/rad?
@@ -28,11 +32,15 @@ med vanliga ord, en rad per steg, utan att bry dig om Python.
 
 (Foto av flödesschemat, eller pseudokoden.)
 
+se psudokod.txt
+
+Jag ska också sträva efter att skriva på ett vis som ger mig möjligheten att implementera pygame i framtiden.
+
 ## Mönster jag tror att jag behöver
 
 Gå igenom Mönsterkortet med planen framför dig. Vilka mönster känner du igen?
 
--
+-Att det finns en stor loop där spelaren gör sina val innan spelet kollar ifall fienden har förlorat. Först efter att spelaren har fått en chans att vinna får fienden sin tur.
 
 ## Mina kort
 

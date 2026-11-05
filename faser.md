@@ -27,6 +27,9 @@ Hänvisa till din plan i planering.md. Vilken idé valde du bort, och varför?
 
 Planen i början var att göra något slags spel i rymden, men jag visste inte hur man kunde göra det interesannt. Därför flyttade jag ned den till jorden. Grejen som jag försökte integrera var ett valsystem som inte ser ut likadant som i förra spelet.
 
+
+Jag ändrade att man kan attackera sina egna städer till att man kan utföra propaganda. Det känns mer användbart och gör att man får mer användning för pengar.
+
 ## Konstruera
 
 Hur växte spelet fram? Peka på några commits. Vilket kort tog längst tid?

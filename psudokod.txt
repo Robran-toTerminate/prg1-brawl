@@ -17,8 +17,8 @@ Loopen:
             Mortar (Ökar attackstyrka)
 
 
-        Attack:
-            Subtraherar stadens hp med attackstyrka
+        Propaganda:
+            Ökar både pengar och attackstyrka med en procent
 
 
     Om Finendes:
