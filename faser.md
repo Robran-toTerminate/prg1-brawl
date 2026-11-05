@@ -11,14 +11,21 @@ och vad det ledde till.
 
 Vem ska spela, och vad ska spelet klara? Vad gör att någon vill spela en gång till?
 
+Den som är interesserad av krigsspel ska spela, spelet ska klara av att kräva lite strategi från användaren. Att man antingen förlorar eller vill testa på en ny strategi.
+
 ## Undersöka
 
 Titta på minst ett annat spel med turer, i en terminal, på mobilen eller ett brädspel. Vad tar du
 med dig, och vad gör du inte likadant?
 
+Jag tar med mig från förra fighting-spelet att det är viktigt med en tutorial och ska inte göra lika många animationer då de tog upp väldigt många rader.
+Jag ska också göra display-delen bredare då det här spelet behöver visa mer information
+
 ## Förslag
 
 Hänvisa till din plan i planering.md. Vilken idé valde du bort, och varför?
+
+Planen i början var att göra något slags spel i rymden, men jag visste inte hur man kunde göra det interesannt. Därför flyttade jag ned den till jorden. Grejen som jag försökte integrera var ett valsystem som inte ser ut likadant som i förra spelet.
 
 ## Konstruera
 

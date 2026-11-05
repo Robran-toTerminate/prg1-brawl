@@ -1,0 +1,50 @@
+Antal fiendestäder = 3
+
+Money
+Attackstyrka
+
+Alla städer = [1,2,3,4,5] #Numren är stads-dicts med hp, byggnad och om den visas
+
+Spelaren väljer en huvudstad som ger pengar varje cykel
+
+Loopen:
+
+    Spelaren väljer en av fiendens eller spelarens städer
+
+    Om eget:
+        Bygg:
+            Fabrik (Ger pengar varje cykel)
+            Mortar (Ökar attackstyrka)
+
+
+        Attack:
+            Subtraherar stadens hp med attackstyrka
+
+
+    Om Finendes:
+
+        Attack:
+            Subtraherar stadens hp med attackstyrka
+
+        Spy:
+            Visar permanent vad staden är för någon
+        
+    
+
+    Om fienden inte har några städer:
+        Vinn
+    
+    Annars:
+        Välj slumpmässig stad,
+            Om egen, bygg slumpmässig byggnad
+            Om fiendes, Attackera
+
+    Om spelaren inte har städer:
+        Förlora
+
+
+
+    Visa städer
+        (
+            metod för att ta asciin för stad baserad på index
+        ) 
