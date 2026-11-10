@@ -40,6 +40,10 @@ I början av varje tur, lägg till värden till pengar baserat på ens städer
 Skriv in möjliheten att förlora eller vinna baserat på antalet städer som man har kvar
 - [ ] Varabler som förvarar hur många städer man själv respektive ens fiende har kvar
 
+#### Cool transitions
+<!-- id: task-1794308094722-273 -->
+Om tid finns: Lägg till så att varje gång en karaktär ändras att den går genom ett stadie av nonsens för att det ska se coolare ut. Lite static effekt typ
+
 ## In Progress
 
 #### Planera och skriv dina kort
@@ -54,16 +58,14 @@ rubrikerna längst ner i readme.md. faser.md fylls i längs vägen och blir klar
 <!-- priority: high -->
 <!-- source: faser.md:1 -->
 
-#### Väljsystemet
-<!-- id: task-1793874326218-67 -->
-Ett sätt att välja vilken stad man vill ha
-- [x] Displaymetod för städerna
-- [ ] Metod som returnerar rätt ascii baserat på stadens stadie
-
 #### Spelarens tur
 <!-- id: task-1793874385785-95 -->
 Använd väljsystemet för att låta spelaren välja vilken stad och vad man ska göra där
 - [ ] Välj action på en stad och utför det
+
+#### Handle_command metod
+<!-- id: task-1794318935952-316 -->
+Metod som tar in ett kommando från spelaren (via väljsystemet) och utför det
 
 ## Done
 
@@ -76,3 +78,9 @@ forka och klona repot, öppna det i VS Code
 Skriv variabler som  förvarar de viktiga värdena,
 pengar, attackstyrka och städerna
 - [x] Skapa en klass eller liknande för vilket stadie städerna är i
+
+#### Väljsystemet
+<!-- id: task-1793874326218-67 -->
+Ett sätt att välja vilken stad man vill ha
+- [x] Displaymetod för städerna
+- [x] Metod som returnerar rätt ascii baserat på stadens stadie
