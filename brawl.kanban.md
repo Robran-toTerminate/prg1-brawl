@@ -27,29 +27,6 @@ spelaren väljer varje tur, minst två alternativ som du hittar på. Kraschsäke
 se exemplen i readme.md, eller hitta på ett eget syfte
 <!-- priority: high -->
 
-#### Krav: readme och faserna
-<!-- id: task-1793100000006-6 -->
-rubrikerna längst ner i readme.md. faser.md fylls i längs vägen och blir klar sist
-<!-- priority: high -->
-<!-- source: faser.md:1 -->
-
-#### Grunderna (variablar)
-<!-- id: task-1793874255151-42 -->
-Skriv variabler som  förvarar de viktiga värdena,
-pengar, attackstyrka och städerna
-- [ ] Skapa en klass eller liknande för vilket stadie städerna är i
-
-#### Väljsystemet
-<!-- id: task-1793874326218-67 -->
-Ett sätt att välja vilken stad man vill ha
-- [ ] Displaymetod för städerna
-- [ ] Metod som returnerar rätt ascii baserat på stadens stadie
-
-#### Spelarens tur
-<!-- id: task-1793874385785-95 -->
-Använd väljsystemet för att låta spelaren välja vilken stad och vad man ska göra där
-- [ ] Välj action på en stad och utför det
-
 #### Fiendens första tankar
 <!-- id: task-1793874445518-126 -->
 En simpel fiende som bara gör slumpmässiga actions. Se till att det går att expandera till mer intellegens
@@ -71,8 +48,31 @@ planering.md: ditt spel, planen och dina kort. Lägg in korten här. Visa lärar
 <!-- priority: critical -->
 <!-- source: planering.md:1 -->
 
+#### Krav: readme och faserna
+<!-- id: task-1793100000006-6 -->
+rubrikerna längst ner i readme.md. faser.md fylls i längs vägen och blir klar sist
+<!-- priority: high -->
+<!-- source: faser.md:1 -->
+
+#### Väljsystemet
+<!-- id: task-1793874326218-67 -->
+Ett sätt att välja vilken stad man vill ha
+- [x] Displaymetod för städerna
+- [ ] Metod som returnerar rätt ascii baserat på stadens stadie
+
+#### Spelarens tur
+<!-- id: task-1793874385785-95 -->
+Använd väljsystemet för att låta spelaren välja vilken stad och vad man ska göra där
+- [ ] Välj action på en stad och utför det
+
 ## Done
 
 #### Forka repot
 <!-- id: task-1793100000000-0 -->
 forka och klona repot, öppna det i VS Code
+
+#### Grunderna (variablar)
+<!-- id: task-1793874255151-42 -->
+Skriv variabler som  förvarar de viktiga värdena,
+pengar, attackstyrka och städerna
+- [x] Skapa en klass eller liknande för vilket stadie städerna är i
