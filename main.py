@@ -237,6 +237,7 @@ def next_game_stage():
 
     if game_stage == GAME_STAGES.ENEMIE_TURN:
         game_stage = GAME_STAGES.UPKEEP
+
     if game_stage == GAME_STAGES.UPKEEP:
         game_stage = GAME_STAGES.PLAYER_TURN
 
@@ -247,8 +248,11 @@ while True:
         handle_input()
     elif game_stage == GAME_STAGES.ENEMIE_TURN:
         enemie_logic_MK1()
+
+
     elif game_stage == GAME_STAGES.UPKEEP:
-        pass
+        for city_i in range(len(städer)):
+            pass #xyz ge värden och så
 
     elif game_stage == GAME_STAGES.PLAYER_LOSS:
         print("YOU LOST")
