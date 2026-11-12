@@ -27,19 +27,6 @@ spelaren väljer varje tur, minst två alternativ som du hittar på. Kraschsäke
 se exemplen i readme.md, eller hitta på ett eget syfte
 <!-- priority: high -->
 
-#### Fiendens första tankar
-<!-- id: task-1793874445518-126 -->
-En simpel fiende som bara gör slumpmässiga actions. Se till att det går att expandera till mer intellegens
-
-#### Upkeep
-<!-- id: task-1793874527735-160 -->
-I början av varje tur, lägg till värden till pengar baserat på ens städer
-
-#### Förlust, eller inte
-<!-- id: task-1793874647869-197 -->
-Skriv in möjliheten att förlora eller vinna baserat på antalet städer som man har kvar
-- [ ] Varabler som förvarar hur många städer man själv respektive ens fiende har kvar
-
 #### Cool transitions
 <!-- id: task-1794308094722-273 -->
 Om tid finns: Lägg till så att varje gång en karaktär ändras att den går genom ett stadie av nonsens för att det ska se coolare ut. Lite static effekt typ
@@ -58,14 +45,14 @@ rubrikerna längst ner i readme.md. faser.md fylls i längs vägen och blir klar
 <!-- priority: high -->
 <!-- source: faser.md:1 -->
 
-#### Spelarens tur
-<!-- id: task-1793874385785-95 -->
-Använd väljsystemet för att låta spelaren välja vilken stad och vad man ska göra där
-- [ ] Välj action på en stad och utför det
+#### Upkeep
+<!-- id: task-1793874527735-160 -->
+I början av varje tur, lägg till värden till pengar baserat på ens städer
 
-#### Handle_command metod
-<!-- id: task-1794318935952-316 -->
-Metod som tar in ett kommando från spelaren (via väljsystemet) och utför det
+#### Förlust, eller inte
+<!-- id: task-1793874647869-197 -->
+Skriv in möjliheten att förlora eller vinna baserat på antalet städer som man har kvar
+- [ ] Varabler som förvarar hur många städer man själv respektive ens fiende har kvar
 
 ## Done
 
@@ -84,3 +71,20 @@ pengar, attackstyrka och städerna
 Ett sätt att välja vilken stad man vill ha
 - [x] Displaymetod för städerna
 - [x] Metod som returnerar rätt ascii baserat på stadens stadie
+
+#### Spelarens tur
+<!-- id: task-1793874385785-95 -->
+Använd väljsystemet för att låta spelaren välja vilken stad och vad man ska göra där
+- [x] Välj action på en stad och utför det
+
+#### Handle_command metod
+<!-- id: task-1794318935952-316 -->
+Metod som tar in ett kommando från spelaren (via väljsystemet) och utför det
+
+#### Fiendens första tankar
+<!-- id: task-1793874445518-126 -->
+En simpel fiende som bara gör slumpmässiga actions. Se till att det går att expandera till mer intellegens
+
+#### Descriptions av fiendens actions
+<!-- id: task-1794480028165-45 -->
+Jag inser genom att spela att det är svårt att se vad fienden har gjort, därför lägger jag till att i IDLE sidepanel finns en beskrivning av fiendens förra actions
