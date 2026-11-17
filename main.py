@@ -1,4 +1,8 @@
 import random
+import time
+
+DISPLAY_WIDTH = 100
+DISPLAY_HEIGHT = 50
 
 class GAME_STAGES():
     PLAYER_TURN = 0
@@ -25,6 +29,8 @@ class SIDE_PANEL_STATE():
     IDLE = 0
     SELECTION = 1
     BUILD = 2
+
+    NOTIFICATION = 3
 side_panel_state = SIDE_PANEL_STATE.IDLE
 
 antal_fiendestäder = 1
@@ -91,12 +97,26 @@ def p_o(line): #Se s() metoden. Står för panel option
         return f"{option}"
 
 def s_hp(): #Se s() metoden. Står för stad hp
+
+    if städer[selected_city].visas == False:
+        return "HIDDEN"
+    
     return round(städer[selected_city].hp, 0)
 
 def side_panel(line):
     global side_panel_state
 
-    if side_panel_state != SIDE_PANEL_STATE.IDLE:
+    if side_panel_state == SIDE_PANEL_STATE.NOTIFICATION:
+        match line:
+            case 0: return f"|               "
+            case 1: return f"|   TEXT HERE   "
+            case 2: return f"|               "
+            case 3: return f"|               "
+            case 4: return f"|               "
+            case 5: return f"|               "
+            case 6: return f"|               "
+
+    elif side_panel_state != SIDE_PANEL_STATE.IDLE:
         match line:
             case 0: return f"|  HP: {s_hp()} "
             case 1: return f"|               "
@@ -126,6 +146,24 @@ def show_scene():
              {s(2)}     {side_panel(3)}
                         {side_panel(4)}
 ''')
+
+def notify(message,t):
+    global side_panel_state
+    print("\033c",end="")
+    last_state = side_panel_state
+    side_panel_state = SIDE_PANEL_STATE.NOTIFICATION
+    show_scene()
+    time.sleep(t)
+    side_panel_state = last_state
+    show_scene()
+
+
+effects_grid = []
+
+def handle_effect(game_scene):
+    if effects_grid == []:
+        pass
+
 
 
 def handle_input():
@@ -225,21 +263,43 @@ def enemie_logic_MK1():
 
 
 def next_game_stage():
-    global game_stage
+    global game_stage, spelare_pengar, spelare_attackstyrka
     if game_stage == GAME_STAGES.PLAYER_TURN:
         game_stage = GAME_STAGES.ENEMIE_TURN
+        for stad_i in range(0, antal_fiendestäder):
+            if städer[stad_i].stads_typ != STADS_TYPER.RUIN:
+                break
+
+            if stad_i == antal_fiendestäder-1: #Alla fiendestäder är ruiner, spelare vinner
+                game_stage = GAME_STAGES.PLAYER_WIN
+                return
+
+
+    elif game_stage == GAME_STAGES.ENEMIE_TURN:
         for stad_i in range(antal_fiendestäder, len(städer)):
             if städer[stad_i].stads_typ != STADS_TYPER.RUIN:
                 break
 
             if stad_i == len(städer)-1: #Alla städer är ruiner, spelare förlorar
                 game_stage = GAME_STAGES.PLAYER_LOSS
+                return
+        
 
-    if game_stage == GAME_STAGES.ENEMIE_TURN:
         game_stage = GAME_STAGES.UPKEEP
 
-    if game_stage == GAME_STAGES.UPKEEP:
+    elif game_stage == GAME_STAGES.UPKEEP:
+        notify("jfs",1)
+
+        for stad_i in range(antal_fiendestäder, len(städer)):
+            if städer[stad_i].stads_typ == STADS_TYPER.MORTAR:
+                spelare_attackstyrka += 1
+            elif städer[stad_i].stads_typ == STADS_TYPER.FABRIK:
+                spelare_pengar += 10
+
+        #Fiende upkeep
+
         game_stage = GAME_STAGES.PLAYER_TURN
+
 
 while True:
     print("\033c",end="")
@@ -248,12 +308,16 @@ while True:
         handle_input()
     elif game_stage == GAME_STAGES.ENEMIE_TURN:
         enemie_logic_MK1()
+        next_game_stage()
 
 
     elif game_stage == GAME_STAGES.UPKEEP:
-        for city_i in range(len(städer)):
-            pass #xyz ge värden och så
+        notify("jfs",1)
+        next_game_stage()
 
     elif game_stage == GAME_STAGES.PLAYER_LOSS:
         print("YOU LOST")
+        quit()
+    elif game_stage == GAME_STAGES.PLAYER_WIN:
+        print("YOU WON")
         quit()

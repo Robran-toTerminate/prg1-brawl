@@ -41,3 +41,5 @@ Hur testade du att spelet fungerar? Vad hände när någon annan spelade det?
 ## Revidera
 
 Vad ändrade du efter att ha testat eller lärt dig något nytt? Skriv vad, när och varför.
+
+Insåg att det är ganska svårt att förstå vad som händer, så lägger till ord i side-panel som förklarar

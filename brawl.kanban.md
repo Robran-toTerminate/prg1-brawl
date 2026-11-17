@@ -27,9 +27,9 @@ spelaren väljer varje tur, minst två alternativ som du hittar på. Kraschsäke
 se exemplen i readme.md, eller hitta på ett eget syfte
 <!-- priority: high -->
 
-#### Cool transitions
-<!-- id: task-1794308094722-273 -->
-Om tid finns: Lägg till så att varje gång en karaktär ändras att den går genom ett stadie av nonsens för att det ska se coolare ut. Lite static effekt typ
+#### Lägg till tutorial text
+<!-- id: task-1794910418621-96 -->
+Och massvis med övriga förklarande texter via notify() metoden
 
 ## In Progress
 
@@ -45,14 +45,9 @@ rubrikerna längst ner i readme.md. faser.md fylls i längs vägen och blir klar
 <!-- priority: high -->
 <!-- source: faser.md:1 -->
 
-#### Upkeep
-<!-- id: task-1793874527735-160 -->
-I början av varje tur, lägg till värden till pengar baserat på ens städer
-
-#### Förlust, eller inte
-<!-- id: task-1793874647869-197 -->
-Skriv in möjliheten att förlora eller vinna baserat på antalet städer som man har kvar
-- [ ] Varabler som förvarar hur många städer man själv respektive ens fiende har kvar
+#### Cool transitions
+<!-- id: task-1794308094722-273 -->
+Om tid finns: Lägg till så att varje gång en karaktär ändras att den går genom ett stadie av nonsens för att det ska se coolare ut. Lite static effekt typ
 
 ## Done
 
@@ -88,3 +83,14 @@ En simpel fiende som bara gör slumpmässiga actions. Se till att det går att e
 #### Descriptions av fiendens actions
 <!-- id: task-1794480028165-45 -->
 Jag inser genom att spela att det är svårt att se vad fienden har gjort, därför lägger jag till att i IDLE sidepanel finns en beskrivning av fiendens förra actions
+
+#### Förlust, eller inte
+<!-- id: task-1793874647869-197 -->
+Skriv in möjliheten att förlora eller vinna baserat på antalet städer som man har kvar
+- [ ] Varabler som förvarar hur många städer man själv respektive ens fiende har kvar
+
+#### Upkeep
+<!-- id: task-1793874527735-160 -->
+I början av varje tur, lägg till värden till pengar baserat på ens städer
+- [x] Spelare Upkeep
+- [ ] Fiende Upkeep
